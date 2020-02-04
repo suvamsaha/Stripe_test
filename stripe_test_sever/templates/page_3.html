@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/bootstrap.css')}}" type="text/css">
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}"  type="text/css">
+<script type="text/javascript" src="{{url_for('static', filename= 'js/jquery.1.8.3.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename= 'js/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename= 'js/jquery-scrolltofixed.js')}}"></script>
+
+<div class="container">
+        <!--figure class="logo animated fadeInDown delay-07s">
+                <a href="#"><img src="JCI_Logo_White.png" alt=""></a>
+        </figure-->
+        <form action='conf' method='POST'>
+            <div>
+                <center>
+                    <h2 class="animated fadeInDown delay-07s" style="color:#fcfdf1;"><br> CONFIGURATION PAGE</h2>
+                    <p class="animated fadeInDown delay-07s" style="color:#fefefe;">Enter the commissioning values..</p>
+                    <ul class="we-create animated fadeInUp delay-1s">
+
+                    </ul>
+                     </center>
+                <center>
+                    <div>
+                        <table class="main-section" style="width:80%">
+                            <tr>
+                                <th style="text-align: right;">
+
+                            </th>
+                                <td> CONFIGURATION</td>
+                                <td>
+                            </td>
+                                <td>                            </td>
+                                <th style="text-align: right;">
+                                </th>
+                                <td>CONFIGURATION</td>
+                            </tr>
+                            <tr>
+                                <th style="height: 10px">
+
+                            </th>
+                                <td>                                </td>
+                            </tr>
+                            <tr>
+                                <th>Area:</th>
+                                <td>
+                                <input type='number' name='AREA' placeholder='AREA IN m^2'/>
+                                </td>
+                                <td>                                </td>
+                                <td>                            </td>
+                                <th style="text-align: center;">Device ID </th>
+                                <td>
+                                    <input type='number' name='DEV_ID' placeholder='Device ID (1-32)'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>K Factor:</th>
+                                <td>
+                                    <input type='number' name='K_FACTOR' placeholder='K Factor'>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <th style="text-align: center;">Baud rate </th>
+                                <td>
+                                    <select name="BAUD_RATE">
+                                        <option value="9600">9600</option>
+                                        <option value="19200">19200</option>
+                                        <option value="115200">115200</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Min Flow:</th>
+                                <td><input type='number' name='MIN_FLOW' placeholder='Min Flow IN CFM'>    </td>
+                            </tr>
+                            <tr>
+                                <th>Max Flow:</th>
+                                <td>
+                                    <input type='number' name='MAX_FLOW' placeholder='Max Flow IN CFM'>
+                                </td>
+                            </tr>
+                            <tr><th>Off Set:</th>  <td><input type='number' name='OFF_SET' placeholder='Flow OFF SET IN CFM'> </td></tr>
+                            <tr><th><label>Select No of Thermostat:</label><br> <br></th><td><label> 1 </label>
+                            <input type='radio' name='sensor' value='1' onchange='checkbox1()' checked/><br><label> 2 </label>
+                            <input type='radio' name='sensor' value='2' onchange='checkbox2()'/></td></tr>
+                            <tr><th><label>Sensor 1 MAC Add:</label><div id='box3' style='display: none'><label><br>Sensor 2 MAC Add:</label></div></th>
+                            <td><div id='box1' style='display: inline'><br><input type='text' name='SENSOR_MAC1' placeholder='Sensor 1 MAC ADDRESS'></div><br>
+                            <div id='box2' style='display: none'><br><input type='text' name='SENSOR_MAC2' placeholder='Sensor 2 MAC ADDRESS'></div><br></td></tr>
+                        </table>
+                         </div> <br><br>
+                         <input class="link animated fadeInUp delay-1s servicelink" type='submit' name='BALANCER_SUBMIT' value='Save & SUBMIT'>
+                     </center>
+                 </div>
+             </form>
+    </div>
+{% endblock %}
+
+{% block body %}
+{% endblock %}

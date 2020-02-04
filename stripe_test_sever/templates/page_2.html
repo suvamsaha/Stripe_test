@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<section class="main-section" id="service1" >
+    <title>Result Page</title>
+    <meta http-equiv="refresh" content="2">
+    <div class="container">
+         <center>
+                    <h1 class="animated fadeInDown delay-07s" style="background-color: #9e9e9e;color:#fcfdf1;"><br>RESULT FOR TEST</h1>
+                    <p class="animated fadeInDown delay-07s" style="background-color: #9e9e9e;color:#fefefe;">Test values..</p>
+         </center>
+        <br>
+        <br>
+        <h2>Result Table</h2>
+        <center>
+            <table class="table table-striped" style="width:100%">
+                <tr>
+                    <th>
+                        <strong><font size="5" color = "#110000">Test name</font></strong>
+                    </th>
+                    <td>
+                       <strong><font size="5" color = "#001100" >Success</font></strong>
+                    </td>
+                    <td>
+                        <strong><font size="5" color = "#111111">Failure</font></strong>
+                    </td>
+                </tr>
+                {% for i in range(0,length) %}
+                    <tr>
+                        <th>{{test_list[i]}}</th>
+                        <td><font color="#01E220">{{testsuccessresult[i]}}</font></td>
+                        <td><font color="red">{{testfailresult[i]}}</font></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <form method="get" action="/000000_s@v^server_shutdown">
+                <input type="submit" name="save" value="save">
+                <input type="submit" name="stop" value="stop">
+            </form>
+        </center>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+$(document).ready(function(e)
+{
+    $('#test').scrollToFixed();
+    $('.res-nav_click').click(function()
+    {
+        $('.main-nav').slideToggle();
+        return false});
+        $('.Portfolio-box').magnificPopup({delegate:'a',type:'image'});
+        });
+</script>
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+        <title>Home Page</title>
+            <div class="container" align  = "center" style="background-color: #1e1e1e">
+                    <br><br>
+                    <h1 align="center" >STRIFE TEST</h1>
+                    <br>
+                    <h4>Configure</h4>
+                    <p>  </p>
+
+                </div>
+
+        <div >
+        <form  method="post" action="/2">
+            <div style="margin-right: auto;  margin-left: auto; padding-left: 30px; padding-right: 15px; width:20%;">
+                <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+                <input type="checkbox" name="test" value="SnxRTC" ><font size="6"> SnsRTCTest</font><br>
+                <input type="checkbox" name="test" value="SnxEthernet"><font size="6"> SnsEthernetTest  </font>  <br>
+                <input type="checkbox" name="test" value="SnxTemp"><font size="6"> SnsTemperatureTest</font><br>
+                <input type="checkbox" name="test" value="SnxMemory"><font size="6"> SnsMemoryTest</font><br><br>
+                <input type="submit" name="start" value="Start">
+            </div>
+        </form>
+        </div>
+        {% endblock %}
+    {% block body %}
+{% endblock %}
