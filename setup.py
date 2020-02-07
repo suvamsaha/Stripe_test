@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 import os
 
 install_requires = ["flask", "wheel"]
@@ -21,6 +21,6 @@ setup(name="",
                    "Intended Audience :: Users",
                    "Operating System :: OS Independent",
                    ],
-      entry_points={'console_scripts': ['Stripe-Test = App:main']
+      entry_points={'console_scripts': ['Stripe-Test = run:main']
                     }
       )
